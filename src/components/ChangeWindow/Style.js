@@ -28,4 +28,9 @@ export const InputWert = styled.input`
   border-radius: 50px;
 `;
 
+export const Text = styled.p`
+  color: white;
+  margin: 10px;
+`;
+
 export const Option = styled.option``;
