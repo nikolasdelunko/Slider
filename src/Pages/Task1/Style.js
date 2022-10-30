@@ -64,4 +64,6 @@ export const BtnBox = styled.div`
   justify-content: center;
   align-items: center;
 `;
+
+
 // 25%, 50%, 75%, 100%

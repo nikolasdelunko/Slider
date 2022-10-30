@@ -15,8 +15,8 @@ import { useSelector } from "react-redux";
 import ButtonGroup from "../../components/BtnGroup/ButtonGroup";
 import ChangeColor from "../../components/ChangeWindow/ChangeColor";
 import ChangeSizes from "../../components/ChangeWindow/ChangeSizes";
-import DownloadBtn from "../../components/BtnGroup/DownloadBtn"
-import ChangeText from "../../components/Text/ChangeText"
+import DownloadBtn from "../../components/BtnGroup/DownloadBtn";
+import ChangeText from "../../components/Text/ChangeText";
 
 import ButtonMain from "../../components/BtnGroup/ButtonMain";
 
@@ -32,6 +32,8 @@ export default function Task1() {
   const of = () => {
     setBtnOn(null);
   };
+
+  // ! refactor disign start create, look component block
 
   return (
     <div>
@@ -52,11 +54,16 @@ export default function Task1() {
               {modal === 1.3 && (
                 <Modal text="Set hight & weight" element={<ChangeSizes />} />
               )}
-							{modal === 1.4 && (
+              {modal === 1.4 && (
                 <Modal text="Upload photo" element={<DownloadBtn />} />
               )}
               {!modal && btnOn === 1 && (
-                <ButtonGroup color={1.1} text={1.2} sizes={1.3} download={1.4} />
+                <ButtonGroup
+                  color={1.1}
+                  text={1.2}
+                  sizes={1.3}
+                  download={1.4}
+                />
               )}
             </Block1>
             <Block2 onMouseMove={() => HoverSection(2)} onMouseLeave={of}>
@@ -73,11 +80,16 @@ export default function Task1() {
               {modal === 2.3 && (
                 <Modal text="Set hight & weight" element={<ChangeSizes />} />
               )}
-							{modal === 2.4 && (
+              {modal === 2.4 && (
                 <Modal text="Upload photo" element={<DownloadBtn />} />
               )}
               {!modal && btnOn === 2 && (
-                <ButtonGroup color={2.1} text={2.2} sizes={2.3} download={2.4} />
+                <ButtonGroup
+                  color={2.1}
+                  text={2.2}
+                  sizes={2.3}
+                  download={2.4}
+                />
               )}
             </Block2>
             <Block3 onMouseMove={() => HoverSection(3)} onMouseLeave={of}>
@@ -94,11 +106,16 @@ export default function Task1() {
               {modal === 3.3 && (
                 <Modal text="Set hight & weight" element={<ChangeSizes />} />
               )}
-							{modal === 3.4 && (
+              {modal === 3.4 && (
                 <Modal text="Upload photo" element={<DownloadBtn />} />
               )}
               {!modal && btnOn === 3 && (
-                <ButtonGroup color={3.1} text={3.2} sizes={3.3} download={3.4}/>
+                <ButtonGroup
+                  color={3.1}
+                  text={3.2}
+                  sizes={3.3}
+                  download={3.4}
+                />
               )}
             </Block3>
             <Block4 onMouseMove={() => HoverSection(4)} onMouseLeave={of}>
@@ -115,11 +132,16 @@ export default function Task1() {
               {modal === 4.3 && (
                 <Modal text="Set hight & weight" element={<ChangeSizes />} />
               )}
-							{modal === 4.4 && (
+              {modal === 4.4 && (
                 <Modal text="Upload photo" element={<DownloadBtn />} />
               )}
               {!modal && btnOn === 4 && (
-                <ButtonGroup color={4.1} text={4.2} sizes={4.3} download={4.4}/>
+                <ButtonGroup
+                  color={4.1}
+                  text={4.2}
+                  sizes={4.3}
+                  download={4.4}
+                />
               )}
             </Block4>
           </UpperBox>
@@ -140,11 +162,16 @@ export default function Task1() {
               {modal === 5.3 && (
                 <Modal text="Set hight & weight" element={<ChangeSizes />} />
               )}
-							{modal === 5.4 && (
+              {modal === 5.4 && (
                 <Modal text="Upload photo" element={<DownloadBtn />} />
               )}
               {!modal && btnOn === 5 && (
-                <ButtonGroup color={5.1} text={5.2} sizes={5.3} download={5.4}/>
+                <ButtonGroup
+                  color={5.1}
+                  text={5.2}
+                  sizes={5.3}
+                  download={5.4}
+                />
               )}
             </Block1>
             <Block2 onMouseMove={() => HoverSection(6)} onMouseLeave={of}>
@@ -161,11 +188,16 @@ export default function Task1() {
               {modal === 6.3 && (
                 <Modal text="Set hight & weight" element={<ChangeSizes />} />
               )}
-							{modal === 6.4 && (
+              {modal === 6.4 && (
                 <Modal text="Upload photo" element={<DownloadBtn />} />
               )}
               {!modal && btnOn === 6 && (
-                <ButtonGroup color={6.1} text={6.2} sizes={6.3} download={6.4}/>
+                <ButtonGroup
+                  color={6.1}
+                  text={6.2}
+                  sizes={6.3}
+                  download={6.4}
+                />
               )}
             </Block2>
             <Block3 onMouseMove={() => HoverSection(7)} onMouseLeave={of}>
@@ -182,11 +214,16 @@ export default function Task1() {
               {modal === 7.3 && (
                 <Modal text="Set hight & weight" element={<ChangeSizes />} />
               )}
-							{modal === 7.4 && (
+              {modal === 7.4 && (
                 <Modal text="Upload photo" element={<DownloadBtn />} />
               )}
               {!modal && btnOn === 7 && (
-                <ButtonGroup color={7.1} text={7.2} sizes={7.3} download={7.4}/>
+                <ButtonGroup
+                  color={7.1}
+                  text={7.2}
+                  sizes={7.3}
+                  download={7.4}
+                />
               )}
             </Block3>
             <Block4 onMouseMove={() => HoverSection(8)} onMouseLeave={of}>
@@ -203,11 +240,16 @@ export default function Task1() {
               {modal === 8.3 && (
                 <Modal text="Set hight & weight" element={<ChangeSizes />} />
               )}
-							{modal === 8.4 && (
+              {modal === 8.4 && (
                 <Modal text="Upload photo" element={<DownloadBtn />} />
               )}
               {!modal && btnOn === 8 && (
-                <ButtonGroup color={8.1} text={8.2} sizes={8.3} download={8.4}/>
+                <ButtonGroup
+                  color={8.1}
+                  text={8.2}
+                  sizes={8.3}
+                  download={8.4}
+                />
               )}
             </Block4>
           </DownBox>
@@ -216,6 +258,8 @@ export default function Task1() {
           <ButtonMain />
         </BtnBox>
       </MainBox>
+      {modal === 0.1 && <Modal text="Change size" element={<ChangeSizes />} />}
+      {modal === 0.2 && <Modal text="Change gap" element={<ChangeSizes />} />}
     </div>
   );
 }

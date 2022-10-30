@@ -60,6 +60,8 @@ export const BoxBtn = styled.div`
   align-items: center;
   justify-content: space-around;
   width: 90%;
+  flex-direction: column;
+  gap: 10px;
 `;
 // border: ${props => props.primary ? "1px solid black" : "null"}
 // ${props => props.primary ? "relative" : "absolute"};

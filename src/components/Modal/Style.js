@@ -9,6 +9,8 @@ export const MainBox = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
+  top: 10%;
+  left: 10%;
 `;
 
 export const Text = styled.p`
