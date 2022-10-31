@@ -1,18 +1,27 @@
-import React, { useState } from "react";
+import React from "react";
 import { Option, Select, Input, Text } from "./Style";
 import { BoxMain } from "../Text/Style";
+import { fetchCardOperations } from "../../store/cards";
+import { useSelector, useDispatch } from "react-redux";
 
 export default function ChangeColor() {
-  const [color, setColor] = useState(null);
-  const [opacity, setOpacity] = useState(0);
+  const dispatch = useDispatch();
 
+  const changeEl = useSelector((state) => state.helpers.modal);
+  const data = useSelector((state) => state.cards.card);
+  const findData = data.find((el) => el.number === Math.floor(changeEl));
 
   return (
     <BoxMain>
       <Select
         onChange={(e) => {
-					setColor(e.target.value);
+          fetchCardOperations.editCardInfo({
+            number: Math.floor(changeEl),
+            color: e.target.value,
+            opacity: findData?.opacity ? findData?.opacity : null,
+          })(dispatch);
         }}
+        onMouseDown={() => {}}
       >
         <Option value="null" selected>
           change color
@@ -26,7 +35,11 @@ export default function ChangeColor() {
       <Text>Change background opacity</Text>
       <Input
         onChange={(e) => {
-          setOpacity(e.target.value);
+          fetchCardOperations.editCardInfo({
+            number: 1,
+            color: findData?.color ? findData?.color : null,
+            opacity: e.target.value,
+          })(dispatch);
         }}
         type="range"
         min="1"

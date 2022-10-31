@@ -24,6 +24,7 @@ export default function Task1() {
   const modal = useSelector((state) => state.helpers.modal);
   const page = useSelector((state) => state.helpers.page);
   const [btnOn, setBtnOn] = useState(false);
+	const data = useSelector((state) => state.cards.card);
 
   const HoverSection = (sec) => {
     setBtnOn(sec);
@@ -40,7 +41,7 @@ export default function Task1() {
       <MainBox>
         {page === 1 && (
           <UpperBox>
-            <Block1 onMouseMove={() => HoverSection(1)} onMouseLeave={of}>
+            <Block1 background={`${data[0].color}`} opacity={`${data[0].opacity}%`} onMouseMove={() => HoverSection(1)} onMouseLeave={of}>
               <Title>1</Title>
               {modal === 1.1 && (
                 <Modal text="Choose color" element={<ChangeColor />} />

@@ -28,7 +28,8 @@ export const DownBox = styled.div`
 
 export const Block1 = styled.div`
   position: relative;
-  background-color: blue;
+  background-color: ${props => props.background};
+	opacity :  ${props => props.opacity};
   display: flex;
   align-items: center;
   justify-content: center;
