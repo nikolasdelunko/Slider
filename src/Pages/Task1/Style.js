@@ -40,7 +40,8 @@ export const Block2 = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: red;
+	background-color: ${props => props.background};
+	opacity :  ${props => props.opacity};
   grid-area: RightHeader;
 `;
 export const Block3 = styled.div`
@@ -48,7 +49,8 @@ export const Block3 = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: yellow;
+	background-color: ${props => props.background};
+	opacity :  ${props => props.opacity};
   grid-area: leftCenter;
 `;
 export const Block4 = styled.div`
@@ -56,7 +58,8 @@ export const Block4 = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: green;
+	background-color: ${props => props.background};
+	opacity :  ${props => props.opacity};
   grid-area: RightCenter;
 `;
 

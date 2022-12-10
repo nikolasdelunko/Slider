@@ -13,30 +13,25 @@ export default function ChangeColor() {
 
   return (
     <BoxMain>
-      <Select
+			<Input
         onChange={(e) => {
+          console.log(findData, Math.floor(changeEl));
           fetchCardOperations.editCardInfo({
             number: Math.floor(changeEl),
             color: e.target.value,
             opacity: findData?.opacity ? findData?.opacity : null,
           })(dispatch);
         }}
-        onMouseDown={() => {}}
-      >
-        <Option value="null" selected>
-          change color
-        </Option>
-        <Option value="blue">blue</Option>
-        <Option value="white">white</Option>
-        <Option value="green">green</Option>
-        <Option value="yellow">yellow</Option>
-        <Option value="black">black</Option>
-      </Select>
+        type="color"
+        id="head"
+        name="head"
+        value={findData?.color}
+      />
       <Text>Change background opacity</Text>
       <Input
         onChange={(e) => {
           fetchCardOperations.editCardInfo({
-            number: 1,
+            number: Math.floor(changeEl),
             color: findData?.color ? findData?.color : null,
             opacity: e.target.value,
           })(dispatch);

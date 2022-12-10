@@ -1,7 +1,27 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  card: [],
+  card: [{
+		number: 1,
+		color:  "blue",
+		opacity: 100,
+	},
+	{
+		number: 2,
+		color:  "red",
+		opacity: 100,
+	},
+	{
+		number: 3,
+		color:  "yellow",
+		opacity: 100,
+	},
+	{
+		number: 4,
+		color:  "green",
+		opacity: 100,
+	},
+],
 };
 
 const helpersSlice = createSlice({
@@ -16,7 +36,7 @@ const helpersSlice = createSlice({
         state.card = [...state.card, action.payload];
       } else {
         state.card.forEach(function (el, i) {
-          if (el.number == action.payload.number)
+          if (el.number === action.payload.number)
             state.card.splice(i, 1, {
               number: action.payload.number,
 							color:  action.payload.color,
