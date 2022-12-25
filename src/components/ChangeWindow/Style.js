@@ -33,4 +33,16 @@ export const Text = styled.p`
   margin: 10px;
 `;
 
+export const Box = styled.div`
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+`;
+
+export const BoxH = styled.div`
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+`;
+
 export const Option = styled.option``;

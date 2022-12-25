@@ -38,6 +38,15 @@ const initialState = {
 			title: "",
 			colorText: "white",
     },
+		{
+      number: 0,
+			title: "",
+			colorText: "white",
+			upperBlock: "30",
+			downBlock: "50",
+			upperLine: "300",
+			downLine: "300"
+    },
   ],
 };
 
@@ -62,6 +71,10 @@ const helpersSlice = createSlice({
               width: action.payload.width,
 							title: action.payload.title,
 							colorText: action.payload.colorText,
+							upperBlock: action.payload.upperBlock,
+							downBlock: action.payload.downBlock,
+							upperLine: action.payload.upperLine,
+							downLine: action.payload.downLine,
             });
         });
       }

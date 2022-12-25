@@ -6,8 +6,8 @@ export const MainBox = styled.div`
 
 export const UpperBox = styled.div`
   display: grid;
-  grid-template-columns: 30% 50%; //! тут по шырене блоков вверх и низ
-  grid-template-rows: 300px 300px; //! тут по Высоте блоков вверх и низ
+	grid-template-columns: ${(props) => props.sizesHeight};
+  grid-template-rows: ${(props) => props.sizesWidth};
   gap: 5px; //! растояние между блоками
   grid-template-areas: "LeftHeader RightHeader RightHeader" "leftCenter leftCenter RightCenter";
   padding-bottom: 5px;

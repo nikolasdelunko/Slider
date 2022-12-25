@@ -15,6 +15,7 @@ import { useSelector } from "react-redux";
 import ButtonGroup from "../../components/BtnGroup/ButtonGroup";
 import ChangeColor from "../../components/ChangeWindow/ChangeColor";
 import ChangeSizes from "../../components/ChangeWindow/ChangeSizes";
+import ChangeMainSizes from "../../components/ChangeWindow/ChangeMainSize";
 import DownloadBtn from "../../components/BtnGroup/DownloadBtn";
 import ChangeText from "../../components/Text/ChangeText";
 
@@ -40,7 +41,14 @@ export default function Task1() {
     <div>
       <MainBox>
         {page === 1 && (
-          <UpperBox>
+          <UpperBox
+            sizesHeight={
+              `${data[4].upperBlock}%` + " " + `${data[4].downBlock}%`
+            }
+            sizesWidth={
+              `${data[4].upperLine}px` + " " + `${data[4].downLine}px`
+            }
+          >
             <Block1
               background={`${data[0].color}`}
               opacity={`${data[0].opacity}%`}
@@ -287,7 +295,9 @@ export default function Task1() {
           <ButtonMain />
         </BtnBox>
       </MainBox>
-      {modal === 0.1 && <Modal text="Change size" element={<ChangeSizes />} />}
+      {modal === 0.1 && (
+        <Modal text="Change size" element={<ChangeMainSizes />} />
+      )}
       {modal === 0.2 && <Modal text="Change gap" element={<ChangeSizes />} />}
     </div>
   );
