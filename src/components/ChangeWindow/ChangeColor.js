@@ -44,7 +44,7 @@ export default function ChangeColor() {
           })(dispatch);
         }}
         type="range"
-        min="1"
+        min="30"
         max="100"
         id="myRange"
       />
