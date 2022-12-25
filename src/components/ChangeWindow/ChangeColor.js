@@ -13,12 +13,16 @@ export default function ChangeColor() {
 
   return (
     <BoxMain>
-			<Input
+      <Input
         onChange={(e) => {
           fetchCardOperations.editCardInfo({
             number: Math.floor(changeEl),
             color: e.target.value,
             opacity: findData?.opacity ? findData?.opacity : null,
+            title: findData?.title,
+            height: findData?.width ? findData?.width : 100,
+            width: findData?.width ? findData?.width : 100,
+						colorText: findData?.colorText && findData?.colorText,
           })(dispatch);
         }}
         type="color"
@@ -33,6 +37,10 @@ export default function ChangeColor() {
             number: Math.floor(changeEl),
             color: findData?.color ? findData?.color : null,
             opacity: e.target.value,
+            title: findData?.title,
+            height: findData?.width ? findData?.width : 100,
+            width: findData?.width ? findData?.width : 100,
+						colorText: findData?.colorText && findData?.colorText,
           })(dispatch);
         }}
         type="range"

@@ -1,35 +1,56 @@
-import React, { useState } from "react";
+import React from "react";
 import { Input, BoxMain } from "./Style";
-import { Option, Select } from "../ChangeWindow/Style";
+import { fetchCardOperations } from "../../store/cards";
+import { useSelector, useDispatch } from "react-redux";
 
 export default function ChangeText() {
-  const [color, setColor] = useState(null);
-	const [headText, setHeadText] = useState(null);
-	const [description, setDescription] = useState(null);
+  const dispatch = useDispatch();
+
+  const changeEl = useSelector((state) => state.helpers.modal);
+  const data = useSelector((state) => state.cards.card);
+  const findData = data.find((el) => el.number === Math.floor(changeEl));
 
   return (
     <BoxMain>
-      <Input placeholder="head text"  onChange={(e) => {
-          setHeadText(e.target.value);
-        }} />
-      <Input placeholder="Description"  onChange={(e) => {
-          setDescription(e.target.value);
-        }} />
-
-      <Select
+      <Input
+        placeholder={findData?.title ? findData?.title : "write title"}
         onChange={(e) => {
-          setColor(e.target.value);
+          fetchCardOperations.editCardInfo({
+            number: Math.floor(changeEl),
+            color: findData?.color ? findData?.color : null,
+            opacity: findData?.opacity ? findData?.opacity : null,
+            height: findData?.height ? findData?.height : 100,
+            width: findData?.width ? findData?.width : 100,
+            title: e.target.value,
+						colorText: findData?.colorText && findData?.colorText,
+          })(dispatch);
         }}
-      >
-        <Option value="white" selected>
-          white
-        </Option>
-        <Option value="blue">blue</Option>
-        <Option value="grey">grey</Option>
-        <Option value="green">green</Option>
-        <Option value="yellow">yellow</Option>
-        <Option value="black">black</Option>
-      </Select>
+      />
+{/* 
+      <Input
+        placeholder="Description"
+        onChange={(e) => {
+          // setDescription(e.target.value);
+        }}
+      /> */}
+
+      <Input
+        onChange={(e) => {
+          fetchCardOperations.editCardInfo({
+            number: Math.floor(changeEl),
+            color: findData?.color ? findData?.color : null,
+            opacity: findData?.opacity ? findData?.opacity : null,
+            title: findData?.title,
+            height: findData?.width ? findData?.width : 100,
+            width: findData?.width ? findData?.width : 100,
+            colorText: e.target.value,
+          })(dispatch);
+        }}
+        type="color"
+        id="head"
+        name="head"
+        value={findData?.color}
+      />
     </BoxMain>
   );
 }

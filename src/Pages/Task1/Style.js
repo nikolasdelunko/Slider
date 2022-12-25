@@ -14,7 +14,7 @@ export const UpperBox = styled.div`
 `;
 
 export const Title = styled.p`
-  color: white;
+  color: ${(props) => props.colorText};
 `;
 
 export const DownBox = styled.div`

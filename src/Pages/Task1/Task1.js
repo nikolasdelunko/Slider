@@ -24,7 +24,7 @@ export default function Task1() {
   const modal = useSelector((state) => state.helpers.modal);
   const page = useSelector((state) => state.helpers.page);
   const [btnOn, setBtnOn] = useState(false);
-	const data = useSelector((state) => state.cards.card);
+  const data = useSelector((state) => state.cards.card);
 
   const HoverSection = (sec) => {
     setBtnOn(sec);
@@ -41,8 +41,15 @@ export default function Task1() {
       <MainBox>
         {page === 1 && (
           <UpperBox>
-            <Block1 background={`${data[0].color}`} opacity={`${data[0].opacity}%`} height={`${data[0].height}%`} width={`${data[0].width}%`} onMouseMove={() => HoverSection(1)} onMouseLeave={of}>
-              <Title>1</Title>
+            <Block1
+              background={`${data[0].color}`}
+              opacity={`${data[0].opacity}%`}
+              height={`${data[0].height}%`}
+              width={`${data[0].width}%`}
+              onMouseMove={() => HoverSection(1)}
+              onMouseLeave={of}
+            >
+              <Title colorText={`${data[0].colorText}`}>{data[0].title}</Title>
               {modal === 1.1 && (
                 <Modal text="Choose color" element={<ChangeColor />} />
               )}
@@ -67,8 +74,15 @@ export default function Task1() {
                 />
               )}
             </Block1>
-            <Block2 background={`${data[1].color}`} opacity={`${data[1].opacity}%`} height={`${data[1].height}%`} width={`${data[1].width}%`} onMouseMove={() => HoverSection(2)} onMouseLeave={of}>
-              <Title>2</Title>
+            <Block2
+              background={`${data[1].color}`}
+              opacity={`${data[1].opacity}%`}
+              height={`${data[1].height}%`}
+              width={`${data[1].width}%`}
+              onMouseMove={() => HoverSection(2)}
+              onMouseLeave={of}
+            >
+              <Title colorText={`${data[1].colorText}`}>{data[1].title}</Title>
               {modal === 2.1 && (
                 <Modal text="Choose color" element={<ChangeColor />} />
               )}
@@ -93,8 +107,15 @@ export default function Task1() {
                 />
               )}
             </Block2>
-            <Block3 background={`${data[2].color}`} opacity={`${data[2].opacity}%`} height={`${data[2].height}%`} width={`${data[2].width}%`} onMouseMove={() => HoverSection(3)} onMouseLeave={of}>
-              <Title>3</Title>
+            <Block3
+              background={`${data[2].color}`}
+              opacity={`${data[2].opacity}%`}
+              height={`${data[2].height}%`}
+              width={`${data[2].width}%`}
+              onMouseMove={() => HoverSection(3)}
+              onMouseLeave={of}
+            >
+              <Title colorText={`${data[2].colorText}`}>{data[2].title}</Title>
               {modal === 3.1 && (
                 <Modal text="Choose color" element={<ChangeColor />} />
               )}
@@ -119,8 +140,15 @@ export default function Task1() {
                 />
               )}
             </Block3>
-            <Block4 background={`${data[3].color}`} opacity={`${data[3].opacity}%`} height={`${data[3].height}%`} width={`${data[3].width}%`} onMouseMove={() => HoverSection(4)} onMouseLeave={of}>
-              <Title>4</Title>
+            <Block4
+              background={`${data[3].color}`}
+              opacity={`${data[3].opacity}%`}
+              height={`${data[3].height}%`}
+              width={`${data[3].width}%`}
+              onMouseMove={() => HoverSection(4)}
+              onMouseLeave={of}
+            >
+              <Title colorText={`${data[3].colorText}`}>{data[3].title}</Title>
               {modal === 4.1 && (
                 <Modal text="Choose color" element={<ChangeColor />} />
               )}

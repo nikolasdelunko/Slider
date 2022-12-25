@@ -23,6 +23,8 @@ export default function ChangeSizes() {
             opacity: findData?.opacity ? findData?.opacity : null,
             height: findData?.width ? findData?.width : 100,
             width: e.target.value,
+						title: findData?.title,
+						colorText: findData?.colorText && findData?.colorText,
           })(dispatch);
         }}
       />
@@ -39,6 +41,8 @@ export default function ChangeSizes() {
             opacity: findData?.opacity ? findData?.opacity : null,
             height: e.target.value,
             width: findData?.width ? findData?.width : 100,
+						title: findData?.title,
+						colorText: findData?.colorText && findData?.colorText,
           })(dispatch);
         }}
       />
