@@ -41,7 +41,7 @@ export default function Task1() {
       <MainBox>
         {page === 1 && (
           <UpperBox>
-            <Block1 background={`${data[0].color}`} opacity={`${data[0].opacity}%`} onMouseMove={() => HoverSection(1)} onMouseLeave={of}>
+            <Block1 background={`${data[0].color}`} opacity={`${data[0].opacity}%`} height={`${data[0].height}%`} width={`${data[0].width}%`} onMouseMove={() => HoverSection(1)} onMouseLeave={of}>
               <Title>1</Title>
               {modal === 1.1 && (
                 <Modal text="Choose color" element={<ChangeColor />} />
@@ -67,7 +67,7 @@ export default function Task1() {
                 />
               )}
             </Block1>
-            <Block2 background={`${data[1].color}`} opacity={`${data[1].opacity}%`} onMouseMove={() => HoverSection(2)} onMouseLeave={of}>
+            <Block2 background={`${data[1].color}`} opacity={`${data[1].opacity}%`} height={`${data[1].height}%`} width={`${data[1].width}%`} onMouseMove={() => HoverSection(2)} onMouseLeave={of}>
               <Title>2</Title>
               {modal === 2.1 && (
                 <Modal text="Choose color" element={<ChangeColor />} />
@@ -93,7 +93,7 @@ export default function Task1() {
                 />
               )}
             </Block2>
-            <Block3 background={`${data[2].color}`} opacity={`${data[2].opacity}%`} onMouseMove={() => HoverSection(3)} onMouseLeave={of}>
+            <Block3 background={`${data[2].color}`} opacity={`${data[2].opacity}%`} height={`${data[2].height}%`} width={`${data[2].width}%`} onMouseMove={() => HoverSection(3)} onMouseLeave={of}>
               <Title>3</Title>
               {modal === 3.1 && (
                 <Modal text="Choose color" element={<ChangeColor />} />
@@ -119,7 +119,7 @@ export default function Task1() {
                 />
               )}
             </Block3>
-            <Block4 background={`${data[3].color}`} opacity={`${data[3].opacity}%`} onMouseMove={() => HoverSection(4)} onMouseLeave={of}>
+            <Block4 background={`${data[3].color}`} opacity={`${data[3].opacity}%`} height={`${data[3].height}%`} width={`${data[3].width}%`} onMouseMove={() => HoverSection(4)} onMouseLeave={of}>
               <Title>4</Title>
               {modal === 4.1 && (
                 <Modal text="Choose color" element={<ChangeColor />} />

@@ -15,7 +15,6 @@ export default function ChangeColor() {
     <BoxMain>
 			<Input
         onChange={(e) => {
-          console.log(findData, Math.floor(changeEl));
           fetchCardOperations.editCardInfo({
             number: Math.floor(changeEl),
             color: e.target.value,

@@ -5,6 +5,8 @@ const editCardInfo = (values) => (dispatch) => {
     number: values.number,
     color: values.color,
     opacity: values.opacity,
+		height: values.height,
+    width: values.width,
   };
   dispatch(setCard(cardInfo));
 };

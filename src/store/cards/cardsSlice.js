@@ -5,21 +5,29 @@ const initialState = {
 		number: 1,
 		color:  "blue",
 		opacity: 100,
+		height: 100,
+    width: 100,
 	},
 	{
 		number: 2,
 		color:  "red",
 		opacity: 100,
+		height: 100,
+    width: 100,
 	},
 	{
 		number: 3,
 		color:  "yellow",
 		opacity: 100,
+		height: 100,
+    width: 100,
 	},
 	{
 		number: 4,
 		color:  "green",
 		opacity: 100,
+		height: 100,
+    width: 100,
 	},
 ],
 };
@@ -41,6 +49,8 @@ const helpersSlice = createSlice({
               number: action.payload.number,
 							color:  action.payload.color,
 							opacity: action.payload.opacity,
+							height: action.payload.height,
+							width: action.payload.width,
             });
         });
       }
