@@ -17,7 +17,7 @@ export const Input = styled.input`
 export const BoxSizes = styled.div`
   position: absolute;
   display: flex;
-  top: 60%;
+  top: 40%;
 `;
 
 export const InputWert = styled.input`

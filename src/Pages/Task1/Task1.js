@@ -18,6 +18,7 @@ import ChangeSizes from "../../components/ChangeWindow/ChangeSizes";
 import ChangeMainSizes from "../../components/ChangeWindow/ChangeMainSize";
 import DownloadBtn from "../../components/BtnGroup/DownloadBtn";
 import ChangeText from "../../components/Text/ChangeText";
+import ChangeGap from "../../components/ChangeWindow/ChangeGap"
 
 import ButtonMain from "../../components/BtnGroup/ButtonMain";
 
@@ -48,6 +49,9 @@ export default function Task1() {
             sizesWidth={
               `${data[4].upperLine}px` + " " + `${data[4].downLine}px`
             }
+						gap={
+							`${data[4].gap}px`
+						}
           >
             <Block1
               background={`${data[0].color}`}
@@ -298,7 +302,7 @@ export default function Task1() {
       {modal === 0.1 && (
         <Modal text="Change size" element={<ChangeMainSizes />} />
       )}
-      {modal === 0.2 && <Modal text="Change gap" element={<ChangeSizes />} />}
+      {modal === 0.2 && <Modal text="Change gap" element={<ChangeGap />} />}
     </div>
   );
 }

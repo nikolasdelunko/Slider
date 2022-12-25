@@ -8,7 +8,7 @@ export const UpperBox = styled.div`
   display: grid;
 	grid-template-columns: ${(props) => props.sizesHeight};
   grid-template-rows: ${(props) => props.sizesWidth};
-  gap: 5px; //! растояние между блоками
+  gap: ${(props) => props.gap}; //! растояние между блоками
   grid-template-areas: "LeftHeader RightHeader RightHeader" "leftCenter leftCenter RightCenter";
   padding-bottom: 5px;
 `;

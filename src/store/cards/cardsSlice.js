@@ -45,7 +45,8 @@ const initialState = {
 			upperBlock: "30",
 			downBlock: "50",
 			upperLine: "300",
-			downLine: "300"
+			downLine: "300",
+			gap: "5",
     },
   ],
 };
@@ -75,6 +76,7 @@ const helpersSlice = createSlice({
 							downBlock: action.payload.downBlock,
 							upperLine: action.payload.upperLine,
 							downLine: action.payload.downLine,
+							gap: action.payload.gap,
             });
         });
       }

@@ -8,12 +8,12 @@ const editCardInfo = (values) => (dispatch) => {
     height: values.height,
     width: values.width,
     title: values.title ? values.title : "",
-		colorText: values.colorText ? values.colorText : "white",
-		upperBlock: values.upperBlock ? values.upperBlock : "30%",
-		downBlock: values.downBlock ? values.downBlock : "50%",
-		upperLine: values.upperLine ? values.upperLine : "300",
-		downLine: values.downLine ? values.downLine : "300",
-
+    colorText: values.colorText ? values.colorText : "white",
+    upperBlock: values.upperBlock ? values.upperBlock : "30%",
+    downBlock: values.downBlock ? values.downBlock : "50%",
+    upperLine: values.upperLine ? values.upperLine : "300",
+    downLine: values.downLine ? values.downLine : "300",
+    gap: values.gap ? values.gap : "5",
   };
   dispatch(setCard(cardInfo));
 };
